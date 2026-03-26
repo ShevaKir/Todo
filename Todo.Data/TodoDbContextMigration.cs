@@ -7,7 +7,7 @@ public class TodoDbContextMigration : IDesignTimeDbContextFactory<TodoDbContext>
 {
     public TodoDbContext CreateDbContext(string[] args)
     {
-        var connectionString = "Host=localhost;Port=5432;Database=todo-app;Username=postgres;Password=postgres;";
+        var connectionString = DbConstants.ConnectionString;
 
         var optionsBuilder = new DbContextOptionsBuilder<TodoDbContext>();
         optionsBuilder.UseNpgsql(connectionString);

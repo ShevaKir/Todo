@@ -2,7 +2,7 @@ using Todo.Domain.Enums;
 
 namespace Todo.Domain.Entities;
 
-public class Todo
+public class TodoItem
 {
     public int Id { get; set; }
     public string Title { get; set; }

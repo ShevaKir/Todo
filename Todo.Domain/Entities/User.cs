@@ -7,5 +7,5 @@ public class User
     public string Email { get; set; }
     public DateTime CreatedAt { get; set; }
 
-    public ICollection<Todo> Todos { get; set; }
+    public ICollection<TodoItem> Todos { get; set; }
 }

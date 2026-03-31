@@ -15,7 +15,7 @@ public class TodoService
 
     public void CreateTodo(CreateTodoDto todoDto)
     {
-        var todo = new Domain.Entities.Todo
+        var todo = new Domain.Entities.TodoItem
         {
             Title = todoDto.Title,
             Description = todoDto.Description,

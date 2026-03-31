@@ -1,11 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Todo.Domain.Entities;
 
 namespace Todo.Data.Configurations;
 
-public class TodoConfiguration : IEntityTypeConfiguration<Domain.Entities.Todo>
+public class TodoConfiguration : IEntityTypeConfiguration<TodoItem>
 {
-    public void Configure(EntityTypeBuilder<Domain.Entities.Todo> builder)
+    public void Configure(EntityTypeBuilder<TodoItem> builder)
     {
         builder.HasKey(t => t.Id);
         

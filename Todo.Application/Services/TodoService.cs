@@ -37,4 +37,18 @@ public class TodoService
             Status = t.Status
         });
     }
+
+    public void StartTodo(int id)
+    {
+        var todo = _todoRepository.GetById(id);
+        todo.Status = TodoStatus.InProgress;
+        _todoRepository.Update(todo);
+    }
+
+    public void CompleteTodo(int id)
+    {
+        var todo = _todoRepository.GetById(id);
+        todo.Status = TodoStatus.Completed;
+        _todoRepository.Update(todo);
+    }
 }

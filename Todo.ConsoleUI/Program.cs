@@ -25,24 +25,16 @@ class Program
 
         var id = userService.GetById(1).Id;
 
-        todoService.CreateTodo(new CreateTodoDto()
+        foreach (var todoDto in todoService.GetByUserId(id))
         {
-            Title = "Task 1",
-            Description = "Description 1",
-            UserId = id
-        });
+            Console.WriteLine(todoDto.Title + " " + todoDto.Status);
+        }
 
-        todoService.CreateTodo(new CreateTodoDto()
-        {
-            Title = "Task 2",
-            Description = "Description 2",
-            UserId = id
-        });
-
+        todoService.CompleteTodo(2);
 
         foreach (var todoDto in todoService.GetByUserId(id))
         {
-            Console.WriteLine(todoDto.Title);
+            Console.WriteLine(todoDto.Title + " " + todoDto.Status);
         }
     }
 }

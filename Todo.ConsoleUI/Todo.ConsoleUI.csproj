@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Todo.Application\Todo.Application.csproj" />
       <ProjectReference Include="..\Todo.Data\Todo.Data.csproj" />
     </ItemGroup>
 
